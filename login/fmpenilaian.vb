@@ -7,6 +7,7 @@ Public Class fmpenilaian
     Dim cmd As New MySqlCommand
     Dim mysql As New MySqlConnection
     Dim m As New MySqlConnection
+    Dim key As Integer
     Private Sub btnclose_Click(sender As Object, e As EventArgs) Handles btnclose.Click
         Me.Close()
     End Sub
@@ -37,40 +38,53 @@ Public Class fmpenilaian
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         mysqlco = "server=localhost;user id=root;database=spk"
-        If cbnama.Text = "" Then
+        If txtjabatan.Text = "" Or txtkerja.Text = "" Then
             MessageBox.Show("Isi Data")
-            cbnama.Focus()
         Else
-            str = ("INSERT INTO 'penilaian' ('nama','tgl_mulai_kerja','jabatan','nm_kriteria','input_nilai') values ('" & cbnama.Text & "')")
+            str = ("INSERT INTO `penilaian` (`nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `team_leader`, `apraisal`, `nki`, `test`, `rekom`) VALUES ('" + cbnama.Text + "','" + txtkerja.Text + "', '" + txtjabatan.Text + "','" + cbMasaJabatan.Text + "', '" + cbTeamLeader.Text + "', '" + cbAparsial.Text + "', '" + cbNki.Text + "', '" + cbTest.Text + "','" + cbRekomdasi.Text + "')")
             mysql = New MySqlConnection(mysqlco)
-            cmd = New MySqlCommand(str, MySql)
-            read.Read()
-            If read.HasRows Then
-                txtkerja.Text = read.Item(2)
-                txtjabatan.Text = read.Item(3)
-                txtkriteria.Focus()
-            End If
+            cmd = New MySqlCommand(str, mysql)
             Try
-                MySql.Open()
+                mysql.Open()
                 read = cmd.ExecuteReader()
+                read.Read()
                 MessageBox.Show("DATA TERSIMPAN")
-                MySql.Close()
-                cbnama.Text = ""
-                txtkerja.Text = ""
-                txtjabatan.Text = ""
-                cbkriteria.Text = ""
-                txtkriteria.Text = ""
-
+                mysql.Close()
+                Call loaddata()
+                Call clearform()
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
         End If
     End Sub
 
+    Sub clearform()
+        cbnama.ResetText()
+        txtkerja.Clear()
+        txtjabatan.Clear()
+        cbMasaJabatan.Text = "1"
+        cbTeamLeader.Text = "1"
+        cbAparsial.Text = "1"
+        cbRekomdasi.Text = "1"
+        cbNki.Text = "1"
+        cbTest.Text = "1"
+    End Sub
+
+
     Private Sub fmpenilaian_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilDataComboBox()
-        Call tampilkriteria()
+        Call loaddata()
     End Sub
+    Sub loaddata()
+        mysqlco = "server=localhost;user id=root;database=spk"
+        da = New MySqlDataAdapter("SELECT * FROM `penilaian`", mysqlco)
+        mysql = New MySqlConnection(mysqlco)
+        cmd = New MySqlCommand(str, mysql)
+        dt = New DataTable
+        da.Fill(dt)
+        dg3.DataSource = dt
+    End Sub
+
     Sub tampilDataComboBox()
         Call buka_koneksi()
         Dim str As String
@@ -80,20 +94,6 @@ Public Class fmpenilaian
         cbnama.Items.Clear()
         Do While read.Read
             cbnama.Items.Add(read.Item(0))
-        Loop
-        cmd.Dispose()
-        read.Close()
-        mysql.Close()
-    End Sub
-    Sub tampilkriteria()
-        Call buka_koneksi()
-        Dim str As String
-        str = "select nm_kriteria from kriteria"
-        cmd = New MySqlCommand(str, mysqlcon)
-        read = cmd.ExecuteReader
-        cbkriteria.Items.Clear()
-        Do While read.Read
-            cbkriteria.Items.Add(read.Item(0))
         Loop
         cmd.Dispose()
         read.Close()
@@ -117,11 +117,70 @@ Public Class fmpenilaian
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow
             row = Me.dg3.Rows(e.RowIndex)
+            key = row.Cells("idnilai").Value
             cbnama.Text = row.Cells("nama").Value.ToString
             txtkerja.Text = row.Cells("tgl_mulai_kerja").Value.ToString
             txtjabatan.Text = row.Cells("jabatan").Value.ToString
-            cbkriteria.Text = row.Cells("").Value.ToString
-            txtkriteria.Text = row.Cells("").Value.ToString
+            cbMasaJabatan.Text = row.Cells("ms_jab").Value.ToString
+            cbTeamLeader.Text = row.Cells("team_leader").Value.ToString
+            cbAparsial.Text = row.Cells("apraisal").Value.ToString
+            cbRekomdasi.Text = row.Cells("rekom").Value.ToString
+            cbNki.Text = row.Cells("nki").Value.ToString
+            cbTest.Text = row.Cells("test").Value.ToString
         End If
+    End Sub
+
+    Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
+        mysqlco = "server=localhost;user id=root;database=spk"
+        If txtjabatan.Text = "" Or txtkerja.Text = "" Then
+            MessageBox.Show("Isi Data")
+        Else
+            str = "UPDATE `penilaian` SET `nama` = '" + cbnama.Text + "', `tgl_mulai_kerja` = '" + txtkerja.Text + "', `jabatan` =  '" + txtjabatan.Text + "', `ms_jab` ='" + cbMasaJabatan.Text.ToString() + "',`team_leader` ='" + cbTeamLeader.Text.ToString() + "', `apraisal` = '" + cbAparsial.Text.ToString() + "', `nki` = '" + cbNki.Text.ToString() + "', `test` = '" + cbTest.Text.ToString() + "', `rekom` = '" + cbRekomdasi.Text.ToString() + "' WHERE `penilaian`.`idnilai`=" + key.ToString() + ""
+            mysql = New MySqlConnection(mysqlco)
+            cmd = New MySqlCommand(str, mysql)
+            Try
+                mysql.Open()
+                read = cmd.ExecuteReader()
+                read.Read()
+                MessageBox.Show("DATA DIPERBAHARUI")
+                mysql.Close()
+                Call loaddata()
+                Call clearform()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        mysqlco = "server=localhost;user id=root;database=spk"
+        da = New MySqlDataAdapter("SELECT * FROM `penilaian` WHERE nama LIKE '%" + txtSearch.Text + "%'", mysqlco)
+        mysql = New MySqlConnection(mysqlco)
+        cmd = New MySqlCommand(str, mysql)
+        dt = New DataTable
+        da.Fill(dt)
+        dg3.DataSource = dt
+    End Sub
+
+    Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
+        mysqlco = "server=localhost;user id=root;database=spk"
+        mysql = New MySqlConnection(mysqlco)
+        cmd = New MySqlCommand("DELETE FROM `penilaian` WHERE `penilaian`.`idnilai` = " + key.ToString + "", mysql)
+        Try
+            mysql.Open()
+            read = cmd.ExecuteReader()
+            read.Read()
+            MessageBox.Show("DATA TERHAPUS")
+            mysql.Close()
+            Call clearform()
+            Call loaddata()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
+        Call loaddata()
+        Call clearform()
     End Sub
 End Class

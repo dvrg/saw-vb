@@ -20,7 +20,7 @@ Public Class fmlogin
         Try
             mysqlcon.Open()
             Dim query As String
-            query = "select * from login where username='" & txtusername.Text & "' and password='" & txtpass.Text & "'"
+            query = "select nama from login where username='" & txtusername.Text & "' and password='" & txtpass.Text & "'"
             com = New MySqlCommand(query, mysqlcon)
             read = com.ExecuteReader
             Dim count As Integer
@@ -29,7 +29,6 @@ Public Class fmlogin
                 count = count + 1
             End While
             If count = 1 Then
-                MessageBox.Show("Username dan Password Anda Benar")
                 fmmenu.Show()
                 Hide()
             ElseIf count > 1 Then

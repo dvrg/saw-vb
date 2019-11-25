@@ -28,8 +28,6 @@ Partial Class fmpenilaian
         Me.cbnama = New System.Windows.Forms.ComboBox()
         Me.txtkerja = New System.Windows.Forms.TextBox()
         Me.txtjabatan = New System.Windows.Forms.TextBox()
-        Me.txtkriteria = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -44,19 +42,35 @@ Partial Class fmpenilaian
         Me.btnedit = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.Button()
-        Me.cbkriteria = New System.Windows.Forms.ComboBox()
         Me.btnrefresh = New System.Windows.Forms.Button()
         Me.dg3 = New System.Windows.Forms.DataGridView()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.lblSearch = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbRekomdasi = New System.Windows.Forms.ComboBox()
+        Me.cbTest = New System.Windows.Forms.ComboBox()
+        Me.cbNki = New System.Windows.Forms.ComboBox()
+        Me.cbAparsial = New System.Windows.Forms.ComboBox()
+        Me.cbTeamLeader = New System.Windows.Forms.ComboBox()
+        Me.cbMasaJabatan = New System.Windows.Forms.ComboBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
         CType(Me.dg3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(272, 117)
+        Me.Label1.Location = New System.Drawing.Point(272, 89)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 0
@@ -65,7 +79,7 @@ Partial Class fmpenilaian
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(179, 153)
+        Me.Label2.Location = New System.Drawing.Point(179, 116)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label2.Size = New System.Drawing.Size(131, 13)
@@ -75,7 +89,7 @@ Partial Class fmpenilaian
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(255, 188)
+        Me.Label3.Location = New System.Drawing.Point(255, 142)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 2
@@ -84,40 +98,24 @@ Partial Class fmpenilaian
         'cbnama
         '
         Me.cbnama.FormattingEnabled = True
-        Me.cbnama.Location = New System.Drawing.Point(336, 114)
+        Me.cbnama.Location = New System.Drawing.Point(323, 86)
         Me.cbnama.Name = "cbnama"
         Me.cbnama.Size = New System.Drawing.Size(121, 21)
         Me.cbnama.TabIndex = 5
         '
         'txtkerja
         '
-        Me.txtkerja.Location = New System.Drawing.Point(336, 150)
+        Me.txtkerja.Location = New System.Drawing.Point(323, 113)
         Me.txtkerja.Name = "txtkerja"
         Me.txtkerja.Size = New System.Drawing.Size(121, 20)
         Me.txtkerja.TabIndex = 6
         '
         'txtjabatan
         '
-        Me.txtjabatan.Location = New System.Drawing.Point(336, 185)
+        Me.txtjabatan.Location = New System.Drawing.Point(323, 139)
         Me.txtjabatan.Name = "txtjabatan"
         Me.txtjabatan.Size = New System.Drawing.Size(121, 20)
         Me.txtjabatan.TabIndex = 7
-        '
-        'txtkriteria
-        '
-        Me.txtkriteria.Location = New System.Drawing.Point(464, 220)
-        Me.txtkriteria.Name = "txtkriteria"
-        Me.txtkriteria.Size = New System.Drawing.Size(75, 20)
-        Me.txtkriteria.TabIndex = 8
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(253, 223)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 13)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "KRITERIA"
         '
         'pnlLeftSide
         '
@@ -131,7 +129,7 @@ Partial Class fmpenilaian
         Me.pnlLeftSide.Dock = System.Windows.Forms.DockStyle.Left
         Me.pnlLeftSide.Location = New System.Drawing.Point(0, 0)
         Me.pnlLeftSide.Name = "pnlLeftSide"
-        Me.pnlLeftSide.Size = New System.Drawing.Size(158, 527)
+        Me.pnlLeftSide.Size = New System.Drawing.Size(158, 386)
         Me.pnlLeftSide.TabIndex = 10
         '
         'pnlOnButtonPosition
@@ -160,7 +158,7 @@ Partial Class fmpenilaian
         Me.btnkontak.Image = Global.spk.My.Resources.Resources.contact__1_
         Me.btnkontak.Location = New System.Drawing.Point(2, 297)
         Me.btnkontak.Name = "btnkontak"
-        Me.btnkontak.Size = New System.Drawing.Size(156, 31)
+        Me.btnkontak.Size = New System.Drawing.Size(153, 31)
         Me.btnkontak.TabIndex = 2
         Me.btnkontak.Text = "     Contact Us"
         Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -218,7 +216,7 @@ Partial Class fmpenilaian
         Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
         Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(521, 53)
+        Me.pnlTopSide.Size = New System.Drawing.Size(847, 53)
         Me.pnlTopSide.TabIndex = 11
         '
         'btnminimize
@@ -227,7 +225,7 @@ Partial Class fmpenilaian
         Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnminimize.FlatAppearance.BorderSize = 0
         Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(483, 0)
+        Me.btnminimize.Location = New System.Drawing.Point(801, 3)
         Me.btnminimize.Name = "btnminimize"
         Me.btnminimize.Size = New System.Drawing.Size(14, 22)
         Me.btnminimize.TabIndex = 17
@@ -239,7 +237,7 @@ Partial Class fmpenilaian
         Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnclose.FlatAppearance.BorderSize = 0
         Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(503, 0)
+        Me.btnclose.Location = New System.Drawing.Point(821, 3)
         Me.btnclose.Name = "btnclose"
         Me.btnclose.Size = New System.Drawing.Size(14, 22)
         Me.btnclose.TabIndex = 16
@@ -247,7 +245,7 @@ Partial Class fmpenilaian
         '
         'btnsave
         '
-        Me.btnsave.Location = New System.Drawing.Point(278, 268)
+        Me.btnsave.Location = New System.Drawing.Point(590, 317)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(75, 23)
         Me.btnsave.TabIndex = 12
@@ -256,7 +254,7 @@ Partial Class fmpenilaian
         '
         'btnedit
         '
-        Me.btnedit.Location = New System.Drawing.Point(359, 268)
+        Me.btnedit.Location = New System.Drawing.Point(671, 317)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(75, 23)
         Me.btnedit.TabIndex = 13
@@ -265,7 +263,7 @@ Partial Class fmpenilaian
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(440, 268)
+        Me.btndelete.Location = New System.Drawing.Point(752, 317)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 14
@@ -274,24 +272,16 @@ Partial Class fmpenilaian
         '
         'btncancel
         '
-        Me.btncancel.Location = New System.Drawing.Point(521, 268)
+        Me.btncancel.Location = New System.Drawing.Point(833, 317)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.Size = New System.Drawing.Size(75, 23)
         Me.btncancel.TabIndex = 15
         Me.btncancel.Text = "Cancel"
         Me.btncancel.UseVisualStyleBackColor = True
         '
-        'cbkriteria
-        '
-        Me.cbkriteria.FormattingEnabled = True
-        Me.cbkriteria.Location = New System.Drawing.Point(336, 220)
-        Me.cbkriteria.Name = "cbkriteria"
-        Me.cbkriteria.Size = New System.Drawing.Size(121, 21)
-        Me.cbkriteria.TabIndex = 9
-        '
         'btnrefresh
         '
-        Me.btnrefresh.Location = New System.Drawing.Point(197, 268)
+        Me.btnrefresh.Location = New System.Drawing.Point(509, 317)
         Me.btnrefresh.Name = "btnrefresh"
         Me.btnrefresh.Size = New System.Drawing.Size(75, 23)
         Me.btnrefresh.TabIndex = 16
@@ -301,22 +291,183 @@ Partial Class fmpenilaian
         'dg3
         '
         Me.dg3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dg3.Location = New System.Drawing.Point(182, 317)
+        Me.dg3.Location = New System.Drawing.Point(510, 113)
         Me.dg3.Name = "dg3"
         Me.dg3.Size = New System.Drawing.Size(473, 198)
         Me.dg3.TabIndex = 17
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(784, 87)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(165, 20)
+        Me.txtSearch.TabIndex = 18
+        '
+        'lblSearch
+        '
+        Me.lblSearch.AutoSize = True
+        Me.lblSearch.Location = New System.Drawing.Point(722, 90)
+        Me.lblSearch.Name = "lblSearch"
+        Me.lblSearch.Size = New System.Drawing.Size(56, 13)
+        Me.lblSearch.TabIndex = 19
+        Me.lblSearch.Text = "Cari Nama"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.cbRekomdasi)
+        Me.GroupBox1.Controls.Add(Me.cbTest)
+        Me.GroupBox1.Controls.Add(Me.cbNki)
+        Me.GroupBox1.Controls.Add(Me.cbAparsial)
+        Me.GroupBox1.Controls.Add(Me.cbTeamLeader)
+        Me.GroupBox1.Controls.Add(Me.cbMasaJabatan)
+        Me.GroupBox1.Location = New System.Drawing.Point(182, 179)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(282, 190)
+        Me.GroupBox1.TabIndex = 20
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Kriteria"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(49, 154)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(86, 13)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "REKOMENDASI"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(110, 100)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(25, 13)
+        Me.Label8.TabIndex = 25
+        Me.Label8.Text = "NKI"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(100, 127)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 13)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "TEST"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(80, 73)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(59, 13)
+        Me.Label6.TabIndex = 23
+        Me.Label6.Text = "APRAISAL"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(52, 46)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 13)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "TEAM LEADER"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(47, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.TabIndex = 21
+        Me.Label4.Text = "MASA JABATAN"
+        '
+        'cbRekomdasi
+        '
+        Me.cbRekomdasi.FormattingEnabled = True
+        Me.cbRekomdasi.Items.AddRange(New Object() {"1", "2"})
+        Me.cbRekomdasi.Location = New System.Drawing.Point(141, 151)
+        Me.cbRekomdasi.Name = "cbRekomdasi"
+        Me.cbRekomdasi.Size = New System.Drawing.Size(121, 21)
+        Me.cbRekomdasi.TabIndex = 5
+        Me.cbRekomdasi.Text = "1"
+        '
+        'cbTest
+        '
+        Me.cbTest.FormattingEnabled = True
+        Me.cbTest.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbTest.Location = New System.Drawing.Point(141, 124)
+        Me.cbTest.Name = "cbTest"
+        Me.cbTest.Size = New System.Drawing.Size(121, 21)
+        Me.cbTest.TabIndex = 4
+        Me.cbTest.Text = "1"
+        '
+        'cbNki
+        '
+        Me.cbNki.FormattingEnabled = True
+        Me.cbNki.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbNki.Location = New System.Drawing.Point(141, 97)
+        Me.cbNki.Name = "cbNki"
+        Me.cbNki.Size = New System.Drawing.Size(121, 21)
+        Me.cbNki.TabIndex = 3
+        Me.cbNki.Text = "1"
+        '
+        'cbAparsial
+        '
+        Me.cbAparsial.FormattingEnabled = True
+        Me.cbAparsial.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbAparsial.Location = New System.Drawing.Point(141, 70)
+        Me.cbAparsial.Name = "cbAparsial"
+        Me.cbAparsial.Size = New System.Drawing.Size(121, 21)
+        Me.cbAparsial.TabIndex = 2
+        Me.cbAparsial.Text = "1"
+        '
+        'cbTeamLeader
+        '
+        Me.cbTeamLeader.FormattingEnabled = True
+        Me.cbTeamLeader.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbTeamLeader.Location = New System.Drawing.Point(141, 43)
+        Me.cbTeamLeader.Name = "cbTeamLeader"
+        Me.cbTeamLeader.Size = New System.Drawing.Size(121, 21)
+        Me.cbTeamLeader.TabIndex = 1
+        Me.cbTeamLeader.Text = "1"
+        '
+        'cbMasaJabatan
+        '
+        Me.cbMasaJabatan.FormattingEnabled = True
+        Me.cbMasaJabatan.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbMasaJabatan.Location = New System.Drawing.Point(141, 16)
+        Me.cbMasaJabatan.Name = "cbMasaJabatan"
+        Me.cbMasaJabatan.Size = New System.Drawing.Size(121, 21)
+        Me.cbMasaJabatan.TabIndex = 0
+        Me.cbMasaJabatan.Text = "1"
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(955, 84)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(28, 23)
+        Me.btnSearch.TabIndex = 21
+        Me.btnSearch.Text = "Find"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'fmpenilaian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(679, 527)
+        Me.ClientSize = New System.Drawing.Size(1005, 386)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.lblSearch)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.dg3)
         Me.Controls.Add(Me.btnrefresh)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtkriteria)
-        Me.Controls.Add(Me.cbkriteria)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.btndelete)
         Me.Controls.Add(Me.btnedit)
@@ -337,6 +488,8 @@ Partial Class fmpenilaian
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlTopSide.ResumeLayout(False)
         CType(Me.dg3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -347,8 +500,6 @@ Partial Class fmpenilaian
     Friend WithEvents cbnama As System.Windows.Forms.ComboBox
     Friend WithEvents txtkerja As System.Windows.Forms.TextBox
     Friend WithEvents txtjabatan As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtkriteria As System.Windows.Forms.TextBox
     Friend WithEvents pnlLeftSide As System.Windows.Forms.Panel
     Friend WithEvents pnlOnButtonPosition As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
@@ -363,7 +514,22 @@ Partial Class fmpenilaian
     Friend WithEvents btncancel As System.Windows.Forms.Button
     Friend WithEvents btnminimize As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
-    Friend WithEvents cbkriteria As System.Windows.Forms.ComboBox
     Friend WithEvents btnrefresh As System.Windows.Forms.Button
     Friend WithEvents dg3 As System.Windows.Forms.DataGridView
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents lblSearch As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents cbRekomdasi As System.Windows.Forms.ComboBox
+    Friend WithEvents cbTest As System.Windows.Forms.ComboBox
+    Friend WithEvents cbNki As System.Windows.Forms.ComboBox
+    Friend WithEvents cbAparsial As System.Windows.Forms.ComboBox
+    Friend WithEvents cbTeamLeader As System.Windows.Forms.ComboBox
+    Friend WithEvents cbMasaJabatan As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
 End Class
