@@ -37,11 +37,11 @@ Public Class fmpenilaian
     End Sub
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        mysqlco = "server=localhost;user id=root;database=spk"
+        Call buka_koneksi()
         If txtjabatan.Text = "" Or txtkerja.Text = "" Then
             MessageBox.Show("Isi Data")
         Else
-            str = ("INSERT INTO `penilaian` (`nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `team_leader`, `apraisal`, `nki`, `test`, `rekom`) VALUES ('" + cbnama.Text + "','" + txtkerja.Text + "', '" + txtjabatan.Text + "','" + cbMasaJabatan.Text + "', '" + cbTeamLeader.Text + "', '" + cbAparsial.Text + "', '" + cbNki.Text + "', '" + cbTest.Text + "','" + cbRekomdasi.Text + "')")
+            str = ("INSERT INTO `penilaian` (`nama`, `tgl_mulai_kerja`, `jabatan`, `ms_jab`, `team_leader`, `apraisal`, `nki`, `test`, `rekom`) VALUES ('" + cbnama.Text + "','" + txtkerja.Text + "', '" + txtjabatan.Text + "','" + Mid(cbMasaJabatan.Text, 1, 1) + "', '" + Mid(cbTeamLeader.Text, 1, 1) + "', '" + Mid(cbAparsial.Text, 1, 1) + "', '" + Mid(cbNki.Text, 1, 1) + "', '" + Mid(cbTest.Text, 1, 1) + "','" + Mid(cbRekomdasi.Text, 1, 1) + "')")
             mysql = New MySqlConnection(mysqlco)
             cmd = New MySqlCommand(str, mysql)
             Try
@@ -62,12 +62,12 @@ Public Class fmpenilaian
         cbnama.ResetText()
         txtkerja.Clear()
         txtjabatan.Clear()
-        cbMasaJabatan.Text = "1"
-        cbTeamLeader.Text = "1"
-        cbAparsial.Text = "1"
-        cbRekomdasi.Text = "1"
-        cbNki.Text = "1"
-        cbTest.Text = "1"
+        cbMasaJabatan.Text = "-- pilih --"
+        cbTeamLeader.Text = "-- pilih --"
+        cbAparsial.Text = "-- pilih --"
+        cbRekomdasi.Text = "-- pilih --"
+        cbNki.Text = "-- pilih --"
+        cbTest.Text = "-- pilih --"
     End Sub
 
 
@@ -75,6 +75,7 @@ Public Class fmpenilaian
         Call tampilDataComboBox()
         Call loaddata()
     End Sub
+
     Sub loaddata()
         mysqlco = "server=localhost;user id=root;database=spk"
         da = New MySqlDataAdapter("SELECT * FROM `penilaian`", mysqlco)
@@ -135,7 +136,7 @@ Public Class fmpenilaian
         If txtjabatan.Text = "" Or txtkerja.Text = "" Then
             MessageBox.Show("Isi Data")
         Else
-            str = "UPDATE `penilaian` SET `nama` = '" + cbnama.Text + "', `tgl_mulai_kerja` = '" + txtkerja.Text + "', `jabatan` =  '" + txtjabatan.Text + "', `ms_jab` ='" + cbMasaJabatan.Text.ToString() + "',`team_leader` ='" + cbTeamLeader.Text.ToString() + "', `apraisal` = '" + cbAparsial.Text.ToString() + "', `nki` = '" + cbNki.Text.ToString() + "', `test` = '" + cbTest.Text.ToString() + "', `rekom` = '" + cbRekomdasi.Text.ToString() + "' WHERE `penilaian`.`idnilai`=" + key.ToString() + ""
+            str = "UPDATE `penilaian` SET `nama` = '" + cbnama.Text + "', `tgl_mulai_kerja` = '" + txtkerja.Text + "', `jabatan` =  '" + txtjabatan.Text + "', `ms_jab` ='" + Mid(cbMasaJabatan.Text.ToString(), 1, 1) + "',`team_leader` ='" + Mid(cbTeamLeader.Text.ToString(), 1, 1) + "', `apraisal` = '" + Mid(cbAparsial.Text.ToString(), 1, 1) + "', `nki` = '" + Mid(cbNki.Text.ToString(), 1, 1) + "', `test` = '" + Mid(cbTest.Text.ToString(), 1, 1) + "', `rekom` = '" + Mid(cbRekomdasi.Text.ToString(), 1, 1) + "' WHERE `penilaian`.`idnilai`=" + key.ToString() + ""
             mysql = New MySqlConnection(mysqlco)
             cmd = New MySqlCommand(str, mysql)
             Try
@@ -182,5 +183,11 @@ Public Class fmpenilaian
     Private Sub btnrefresh_Click(sender As Object, e As EventArgs) Handles btnrefresh.Click
         Call loaddata()
         Call clearform()
+    End Sub
+
+    Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
+        Dim str As String
+        str = "Hallo aku"
+        MessageBox.Show(Mid(str, 1, 1))
     End Sub
 End Class

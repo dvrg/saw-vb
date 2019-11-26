@@ -155,7 +155,7 @@ Partial Class fmnilai
         Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
         Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(490, 53)
+        Me.pnlTopSide.Size = New System.Drawing.Size(490, 63)
         Me.pnlTopSide.TabIndex = 9
         '
         'pnlnilai
@@ -163,7 +163,7 @@ Partial Class fmnilai
         Me.pnlnilai.BackColor = System.Drawing.Color.White
         Me.pnlnilai.Controls.Add(Me.Panel1)
         Me.pnlnilai.Controls.Add(Me.Panel2)
-        Me.pnlnilai.Location = New System.Drawing.Point(2, 49)
+        Me.pnlnilai.Location = New System.Drawing.Point(0, 60)
         Me.pnlnilai.Name = "pnlnilai"
         Me.pnlnilai.Size = New System.Drawing.Size(490, 369)
         Me.pnlnilai.TabIndex = 10
@@ -254,7 +254,7 @@ Partial Class fmnilai
         '
         Me.Panel3.Controls.Add(Me.btnnilaii)
         Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Location = New System.Drawing.Point(225, 174)
+        Me.Panel3.Location = New System.Drawing.Point(257, 170)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(133, 117)
         Me.Panel3.TabIndex = 10
@@ -283,7 +283,7 @@ Partial Class fmnilai
         '
         Me.Panel4.Controls.Add(Me.Button3)
         Me.Panel4.Controls.Add(Me.Label2)
-        Me.Panel4.Location = New System.Drawing.Point(433, 174)
+        Me.Panel4.Location = New System.Drawing.Point(442, 170)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(133, 117)
         Me.Panel4.TabIndex = 11

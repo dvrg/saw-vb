@@ -24,28 +24,27 @@ Partial Class fmmenu
     Private Sub InitializeComponent()
         Me.pnlLeftSide = New System.Windows.Forms.Panel()
         Me.pnlOnButtonPosition = New System.Windows.Forms.Panel()
-        Me.pnldata = New System.Windows.Forms.Panel()
-        Me.pnlkaryawan = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.pnlkriteria = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.pnlnilai = New System.Windows.Forms.Panel()
-        Me.pnlTopSide = New System.Windows.Forms.Panel()
-        Me.btnkaryawan = New System.Windows.Forms.Button()
-        Me.btnkriteria = New System.Windows.Forms.Button()
-        Me.btnminimize = New System.Windows.Forms.Button()
-        Me.btnclose = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnkontak = New System.Windows.Forms.Button()
         Me.btnhasil = New System.Windows.Forms.Button()
         Me.btnnilai = New System.Windows.Forms.Button()
         Me.btndata = New System.Windows.Forms.Button()
+        Me.pnldata = New System.Windows.Forms.Panel()
+        Me.pnlkaryawan = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnkaryawan = New System.Windows.Forms.Button()
+        Me.pnlkriteria = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnkriteria = New System.Windows.Forms.Button()
+        Me.pnlTopSide = New System.Windows.Forms.Panel()
+        Me.btnminimize = New System.Windows.Forms.Button()
+        Me.btnclose = New System.Windows.Forms.Button()
         Me.pnlLeftSide.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnldata.SuspendLayout()
         Me.pnlkaryawan.SuspendLayout()
         Me.pnlkriteria.SuspendLayout()
         Me.pnlTopSide.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlLeftSide
@@ -70,121 +69,6 @@ Partial Class fmmenu
         Me.pnlOnButtonPosition.Name = "pnlOnButtonPosition"
         Me.pnlOnButtonPosition.Size = New System.Drawing.Size(10, 31)
         Me.pnlOnButtonPosition.TabIndex = 7
-        '
-        'pnldata
-        '
-        Me.pnldata.BackColor = System.Drawing.Color.White
-        Me.pnldata.Controls.Add(Me.pnlkaryawan)
-        Me.pnldata.Controls.Add(Me.pnlkriteria)
-        Me.pnldata.Location = New System.Drawing.Point(158, 53)
-        Me.pnldata.Name = "pnldata"
-        Me.pnldata.Size = New System.Drawing.Size(490, 369)
-        Me.pnldata.TabIndex = 2
-        '
-        'pnlkaryawan
-        '
-        Me.pnlkaryawan.Controls.Add(Me.Label1)
-        Me.pnlkaryawan.Controls.Add(Me.btnkaryawan)
-        Me.pnlkaryawan.Location = New System.Drawing.Point(62, 99)
-        Me.pnlkaryawan.Name = "pnlkaryawan"
-        Me.pnlkaryawan.Size = New System.Drawing.Size(133, 117)
-        Me.pnlkaryawan.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(40, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Karyawan"
-        '
-        'pnlkriteria
-        '
-        Me.pnlkriteria.Controls.Add(Me.Label2)
-        Me.pnlkriteria.Controls.Add(Me.btnkriteria)
-        Me.pnlkriteria.Location = New System.Drawing.Point(256, 99)
-        Me.pnlkriteria.Name = "pnlkriteria"
-        Me.pnlkriteria.Size = New System.Drawing.Size(133, 117)
-        Me.pnlkriteria.TabIndex = 1
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(47, 11)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Kriteria"
-        '
-        'pnlnilai
-        '
-        Me.pnlnilai.BackColor = System.Drawing.Color.White
-        Me.pnlnilai.Location = New System.Drawing.Point(157, 50)
-        Me.pnlnilai.Name = "pnlnilai"
-        Me.pnlnilai.Size = New System.Drawing.Size(490, 369)
-        Me.pnlnilai.TabIndex = 3
-        '
-        'pnlTopSide
-        '
-        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
-        Me.pnlTopSide.Controls.Add(Me.btnminimize)
-        Me.pnlTopSide.Controls.Add(Me.btnclose)
-        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
-        Me.pnlTopSide.Name = "pnlTopSide"
-        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
-        Me.pnlTopSide.TabIndex = 6
-        '
-        'btnkaryawan
-        '
-        Me.btnkaryawan.BackColor = System.Drawing.Color.Silver
-        Me.btnkaryawan.BackgroundImage = Global.spk.My.Resources.Resources.user__1_
-        Me.btnkaryawan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnkaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnkaryawan.Location = New System.Drawing.Point(3, 35)
-        Me.btnkaryawan.Name = "btnkaryawan"
-        Me.btnkaryawan.Size = New System.Drawing.Size(127, 79)
-        Me.btnkaryawan.TabIndex = 0
-        Me.btnkaryawan.UseVisualStyleBackColor = False
-        '
-        'btnkriteria
-        '
-        Me.btnkriteria.BackColor = System.Drawing.Color.Silver
-        Me.btnkriteria.BackgroundImage = Global.spk.My.Resources.Resources.testing__1_
-        Me.btnkriteria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnkriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnkriteria.Location = New System.Drawing.Point(3, 35)
-        Me.btnkriteria.Name = "btnkriteria"
-        Me.btnkriteria.Size = New System.Drawing.Size(127, 79)
-        Me.btnkriteria.TabIndex = 0
-        Me.btnkriteria.UseVisualStyleBackColor = False
-        '
-        'btnminimize
-        '
-        Me.btnminimize.BackColor = System.Drawing.Color.Red
-        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
-        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnminimize.FlatAppearance.BorderSize = 0
-        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnminimize.Location = New System.Drawing.Point(460, 0)
-        Me.btnminimize.Name = "btnminimize"
-        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
-        Me.btnminimize.TabIndex = 13
-        Me.btnminimize.UseVisualStyleBackColor = False
-        '
-        'btnclose
-        '
-        Me.btnclose.BackColor = System.Drawing.Color.Red
-        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
-        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnclose.FlatAppearance.BorderSize = 0
-        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclose.Location = New System.Drawing.Point(474, 0)
-        Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(14, 22)
-        Me.btnclose.TabIndex = 12
-        Me.btnclose.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -254,13 +138,119 @@ Partial Class fmmenu
         Me.btndata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btndata.UseVisualStyleBackColor = True
         '
+        'pnldata
+        '
+        Me.pnldata.BackColor = System.Drawing.Color.White
+        Me.pnldata.Controls.Add(Me.pnlkaryawan)
+        Me.pnldata.Controls.Add(Me.pnlkriteria)
+        Me.pnldata.Location = New System.Drawing.Point(158, 53)
+        Me.pnldata.Name = "pnldata"
+        Me.pnldata.Size = New System.Drawing.Size(490, 369)
+        Me.pnldata.TabIndex = 2
+        '
+        'pnlkaryawan
+        '
+        Me.pnlkaryawan.Controls.Add(Me.Label1)
+        Me.pnlkaryawan.Controls.Add(Me.btnkaryawan)
+        Me.pnlkaryawan.Location = New System.Drawing.Point(99, 117)
+        Me.pnlkaryawan.Name = "pnlkaryawan"
+        Me.pnlkaryawan.Size = New System.Drawing.Size(133, 117)
+        Me.pnlkaryawan.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(40, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Karyawan"
+        '
+        'btnkaryawan
+        '
+        Me.btnkaryawan.BackColor = System.Drawing.Color.Silver
+        Me.btnkaryawan.BackgroundImage = Global.spk.My.Resources.Resources.user__1_
+        Me.btnkaryawan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnkaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkaryawan.Location = New System.Drawing.Point(3, 35)
+        Me.btnkaryawan.Name = "btnkaryawan"
+        Me.btnkaryawan.Size = New System.Drawing.Size(127, 79)
+        Me.btnkaryawan.TabIndex = 0
+        Me.btnkaryawan.UseVisualStyleBackColor = False
+        '
+        'pnlkriteria
+        '
+        Me.pnlkriteria.Controls.Add(Me.Label2)
+        Me.pnlkriteria.Controls.Add(Me.btnkriteria)
+        Me.pnlkriteria.Location = New System.Drawing.Point(284, 117)
+        Me.pnlkriteria.Name = "pnlkriteria"
+        Me.pnlkriteria.Size = New System.Drawing.Size(133, 117)
+        Me.pnlkriteria.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(47, 11)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Kriteria"
+        '
+        'btnkriteria
+        '
+        Me.btnkriteria.BackColor = System.Drawing.Color.Silver
+        Me.btnkriteria.BackgroundImage = Global.spk.My.Resources.Resources.testing__1_
+        Me.btnkriteria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnkriteria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnkriteria.Location = New System.Drawing.Point(3, 35)
+        Me.btnkriteria.Name = "btnkriteria"
+        Me.btnkriteria.Size = New System.Drawing.Size(127, 79)
+        Me.btnkriteria.TabIndex = 0
+        Me.btnkriteria.UseVisualStyleBackColor = False
+        '
+        'pnlTopSide
+        '
+        Me.pnlTopSide.BackColor = System.Drawing.Color.Red
+        Me.pnlTopSide.Controls.Add(Me.btnminimize)
+        Me.pnlTopSide.Controls.Add(Me.btnclose)
+        Me.pnlTopSide.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTopSide.Location = New System.Drawing.Point(158, 0)
+        Me.pnlTopSide.Name = "pnlTopSide"
+        Me.pnlTopSide.Size = New System.Drawing.Size(490, 52)
+        Me.pnlTopSide.TabIndex = 6
+        '
+        'btnminimize
+        '
+        Me.btnminimize.BackColor = System.Drawing.Color.Red
+        Me.btnminimize.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_723__minus__minimize__website_3838428
+        Me.btnminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnminimize.FlatAppearance.BorderSize = 0
+        Me.btnminimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnminimize.Location = New System.Drawing.Point(460, 0)
+        Me.btnminimize.Name = "btnminimize"
+        Me.btnminimize.Size = New System.Drawing.Size(14, 22)
+        Me.btnminimize.TabIndex = 13
+        Me.btnminimize.UseVisualStyleBackColor = False
+        '
+        'btnclose
+        '
+        Me.btnclose.BackColor = System.Drawing.Color.Red
+        Me.btnclose.BackgroundImage = Global.spk.My.Resources.Resources.iconfinder_cancel_1303884
+        Me.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnclose.FlatAppearance.BorderSize = 0
+        Me.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclose.Location = New System.Drawing.Point(474, 0)
+        Me.btnclose.Name = "btnclose"
+        Me.btnclose.Size = New System.Drawing.Size(14, 22)
+        Me.btnclose.TabIndex = 12
+        Me.btnclose.UseVisualStyleBackColor = False
+        '
         'fmmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(648, 429)
-        Me.Controls.Add(Me.pnlnilai)
         Me.Controls.Add(Me.pnldata)
         Me.Controls.Add(Me.pnlTopSide)
         Me.Controls.Add(Me.pnlLeftSide)
@@ -269,13 +259,13 @@ Partial Class fmmenu
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "menu"
         Me.pnlLeftSide.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnldata.ResumeLayout(False)
         Me.pnlkaryawan.ResumeLayout(False)
         Me.pnlkaryawan.PerformLayout()
         Me.pnlkriteria.ResumeLayout(False)
         Me.pnlkriteria.PerformLayout()
         Me.pnlTopSide.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -296,5 +286,4 @@ Partial Class fmmenu
     Friend WithEvents pnlTopSide As System.Windows.Forms.Panel
     Friend WithEvents btnminimize As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
-    Friend WithEvents pnlnilai As System.Windows.Forms.Panel
 End Class

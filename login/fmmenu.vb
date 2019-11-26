@@ -1,12 +1,5 @@
 ﻿Public Class fmmenu
 
-    Private Sub btndata_Click(sender As Object, e As EventArgs) Handles btndata.Click
-        pnlOnButtonPosition.Height = btndata.Height
-        pnlOnButtonPosition.Top = btndata.Top
-        pnldata.Visible = True
-        pnlnilai.Visible = False
-    End Sub
-
     Private Sub btnnilai_Click(sender As Object, e As EventArgs) Handles btnnilai.Click
         fmnilai.Show()
         Hide()

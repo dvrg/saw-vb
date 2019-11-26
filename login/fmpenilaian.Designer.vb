@@ -390,62 +390,62 @@ Partial Class fmpenilaian
         'cbRekomdasi
         '
         Me.cbRekomdasi.FormattingEnabled = True
-        Me.cbRekomdasi.Items.AddRange(New Object() {"1", "2"})
+        Me.cbRekomdasi.Items.AddRange(New Object() {"1. Tidak", "2. Ya"})
         Me.cbRekomdasi.Location = New System.Drawing.Point(141, 151)
         Me.cbRekomdasi.Name = "cbRekomdasi"
         Me.cbRekomdasi.Size = New System.Drawing.Size(121, 21)
         Me.cbRekomdasi.TabIndex = 5
-        Me.cbRekomdasi.Text = "1"
+        Me.cbRekomdasi.Text = "-- pilih --"
         '
         'cbTest
         '
         Me.cbTest.FormattingEnabled = True
-        Me.cbTest.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbTest.Items.AddRange(New Object() {"1. 0 - 49", "2. 50 - 59", "3. 60 - 74", "4. 75 - 84", "5. 85 - 100"})
         Me.cbTest.Location = New System.Drawing.Point(141, 124)
         Me.cbTest.Name = "cbTest"
         Me.cbTest.Size = New System.Drawing.Size(121, 21)
         Me.cbTest.TabIndex = 4
-        Me.cbTest.Text = "1"
+        Me.cbTest.Text = "-- pilih --"
         '
         'cbNki
         '
         Me.cbNki.FormattingEnabled = True
-        Me.cbNki.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbNki.Items.AddRange(New Object() {"1. P5", "2. P4", "3. P3", "4. P2", "5. P1"})
         Me.cbNki.Location = New System.Drawing.Point(141, 97)
         Me.cbNki.Name = "cbNki"
         Me.cbNki.Size = New System.Drawing.Size(121, 21)
         Me.cbNki.TabIndex = 3
-        Me.cbNki.Text = "1"
+        Me.cbNki.Text = "-- pilih --"
         '
         'cbAparsial
         '
         Me.cbAparsial.FormattingEnabled = True
-        Me.cbAparsial.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbAparsial.Items.AddRange(New Object() {"1. C5", "2. C4", "3. C3", "4. C2", "5. C1"})
         Me.cbAparsial.Location = New System.Drawing.Point(141, 70)
         Me.cbAparsial.Name = "cbAparsial"
         Me.cbAparsial.Size = New System.Drawing.Size(121, 21)
         Me.cbAparsial.TabIndex = 2
-        Me.cbAparsial.Text = "1"
+        Me.cbAparsial.Text = "-- pilih --"
         '
         'cbTeamLeader
         '
         Me.cbTeamLeader.FormattingEnabled = True
-        Me.cbTeamLeader.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbTeamLeader.Items.AddRange(New Object() {"1. C5", "2. C4", "3. C3", "4. C2", "5. C1"})
         Me.cbTeamLeader.Location = New System.Drawing.Point(141, 43)
         Me.cbTeamLeader.Name = "cbTeamLeader"
         Me.cbTeamLeader.Size = New System.Drawing.Size(121, 21)
         Me.cbTeamLeader.TabIndex = 1
-        Me.cbTeamLeader.Text = "1"
+        Me.cbTeamLeader.Text = "-- pilih --"
         '
         'cbMasaJabatan
         '
         Me.cbMasaJabatan.FormattingEnabled = True
-        Me.cbMasaJabatan.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        Me.cbMasaJabatan.Items.AddRange(New Object() {"1. < 6 bulan", "2. > 1 tahun", "3. > 2 tahun", "4. > 3 tahun", "5. > 4 tahun"})
         Me.cbMasaJabatan.Location = New System.Drawing.Point(141, 16)
         Me.cbMasaJabatan.Name = "cbMasaJabatan"
         Me.cbMasaJabatan.Size = New System.Drawing.Size(121, 21)
         Me.cbMasaJabatan.TabIndex = 0
-        Me.cbMasaJabatan.Text = "1"
+        Me.cbMasaJabatan.Text = "-- pilih --"
         '
         'btnSearch
         '

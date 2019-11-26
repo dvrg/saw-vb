@@ -36,17 +36,13 @@ Partial Class fmkriteria
         Me.pnlTopSide = New System.Windows.Forms.Panel()
         Me.btnminimize = New System.Windows.Forms.Button()
         Me.btnclose = New System.Windows.Forms.Button()
-        Me.btncancel = New System.Windows.Forms.Button()
-        Me.btndelete = New System.Windows.Forms.Button()
-        Me.btnbaru = New System.Windows.Forms.Button()
-        Me.btnsave = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtkode = New System.Windows.Forms.TextBox()
-        Me.txtatribut = New System.Windows.Forms.TextBox()
         Me.dg2 = New System.Windows.Forms.DataGridView()
-        Me.btnedit = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.pnlLeftSide.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlTopSide.SuspendLayout()
@@ -75,14 +71,14 @@ Partial Class fmkriteria
         '
         Me.txtkriteria.Location = New System.Drawing.Point(315, 157)
         Me.txtkriteria.Name = "txtkriteria"
-        Me.txtkriteria.Size = New System.Drawing.Size(138, 20)
+        Me.txtkriteria.Size = New System.Drawing.Size(174, 20)
         Me.txtkriteria.TabIndex = 2
         '
         'txtbobot
         '
         Me.txtbobot.Location = New System.Drawing.Point(315, 189)
         Me.txtbobot.Name = "txtbobot"
-        Me.txtbobot.Size = New System.Drawing.Size(138, 20)
+        Me.txtbobot.Size = New System.Drawing.Size(174, 20)
         Me.txtbobot.TabIndex = 3
         '
         'pnlLeftSide
@@ -127,7 +123,7 @@ Partial Class fmkriteria
         Me.btnkontak.Location = New System.Drawing.Point(2, 297)
         Me.btnkontak.Name = "btnkontak"
         Me.btnkontak.Size = New System.Drawing.Size(155, 31)
-        Me.btnkontak.TabIndex = 2
+        Me.btnkontak.TabIndex = 10
         Me.btnkontak.Text = "     Contact Us"
         Me.btnkontak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnkontak.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -143,7 +139,7 @@ Partial Class fmkriteria
         Me.btnhasil.Location = New System.Drawing.Point(0, 233)
         Me.btnhasil.Name = "btnhasil"
         Me.btnhasil.Size = New System.Drawing.Size(156, 31)
-        Me.btnhasil.TabIndex = 2
+        Me.btnhasil.TabIndex = 10
         Me.btnhasil.Text = "     Hasil Penilaian"
         Me.btnhasil.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnhasil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -157,7 +153,7 @@ Partial Class fmkriteria
         Me.btnnilai.Location = New System.Drawing.Point(0, 170)
         Me.btnnilai.Name = "btnnilai"
         Me.btnnilai.Size = New System.Drawing.Size(156, 31)
-        Me.btnnilai.TabIndex = 2
+        Me.btnnilai.TabIndex = 10
         Me.btnnilai.Text = "     Penilaian"
         Me.btnnilai.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnnilai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -171,7 +167,7 @@ Partial Class fmkriteria
         Me.btndata.Location = New System.Drawing.Point(0, 113)
         Me.btndata.Name = "btndata"
         Me.btndata.Size = New System.Drawing.Size(156, 31)
-        Me.btndata.TabIndex = 2
+        Me.btndata.TabIndex = 10
         Me.btndata.Text = "     Data Master"
         Me.btndata.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btndata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -212,41 +208,23 @@ Partial Class fmkriteria
         Me.btnclose.TabIndex = 199
         Me.btnclose.UseVisualStyleBackColor = True
         '
-        'btncancel
+        'btnDelete
         '
-        Me.btncancel.Location = New System.Drawing.Point(544, 236)
-        Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(75, 23)
-        Me.btncancel.TabIndex = 193
-        Me.btncancel.Text = "Cancel"
-        Me.btncancel.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(544, 186)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(75, 23)
+        Me.btnDelete.TabIndex = 6
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btndelete
+        'btnSave
         '
-        Me.btndelete.Location = New System.Drawing.Point(544, 206)
-        Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(75, 23)
-        Me.btndelete.TabIndex = 192
-        Me.btndelete.Text = "Delete"
-        Me.btndelete.UseVisualStyleBackColor = True
-        '
-        'btnbaru
-        '
-        Me.btnbaru.Location = New System.Drawing.Point(544, 120)
-        Me.btnbaru.Name = "btnbaru"
-        Me.btnbaru.Size = New System.Drawing.Size(75, 23)
-        Me.btnbaru.TabIndex = 191
-        Me.btnbaru.Text = "New"
-        Me.btnbaru.UseVisualStyleBackColor = True
-        '
-        'btnsave
-        '
-        Me.btnsave.Location = New System.Drawing.Point(544, 148)
-        Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(75, 23)
-        Me.btnsave.TabIndex = 190
-        Me.btnsave.Text = "Save"
-        Me.btnsave.UseVisualStyleBackColor = True
+        Me.btnSave.Location = New System.Drawing.Point(544, 128)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.TabIndex = 4
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -266,28 +244,12 @@ Partial Class fmkriteria
         Me.Label4.TabIndex = 195
         Me.Label4.Text = "KODE KRITERIA"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(218, 221)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 13)
-        Me.Label5.TabIndex = 196
-        Me.Label5.Text = "ATRIBUT"
-        '
         'txtkode
         '
-        Me.txtkode.Location = New System.Drawing.Point(314, 128)
+        Me.txtkode.Location = New System.Drawing.Point(315, 128)
         Me.txtkode.Name = "txtkode"
-        Me.txtkode.Size = New System.Drawing.Size(138, 20)
-        Me.txtkode.TabIndex = 197
-        '
-        'txtatribut
-        '
-        Me.txtatribut.Location = New System.Drawing.Point(315, 218)
-        Me.txtatribut.Name = "txtatribut"
-        Me.txtatribut.Size = New System.Drawing.Size(138, 20)
-        Me.txtatribut.TabIndex = 198
+        Me.txtkode.Size = New System.Drawing.Size(174, 20)
+        Me.txtkode.TabIndex = 1
         '
         'dg2
         '
@@ -297,14 +259,14 @@ Partial Class fmkriteria
         Me.dg2.Size = New System.Drawing.Size(442, 150)
         Me.dg2.TabIndex = 199
         '
-        'btnedit
+        'btnEdit
         '
-        Me.btnedit.Location = New System.Drawing.Point(544, 177)
-        Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(75, 23)
-        Me.btnedit.TabIndex = 200
-        Me.btnedit.Text = "Edit"
-        Me.btnedit.UseVisualStyleBackColor = True
+        Me.btnEdit.Location = New System.Drawing.Point(544, 157)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.btnEdit.TabIndex = 5
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
         'fmkriteria
         '
@@ -312,17 +274,13 @@ Partial Class fmkriteria
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(651, 431)
-        Me.Controls.Add(Me.btnedit)
+        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.dg2)
-        Me.Controls.Add(Me.txtatribut)
         Me.Controls.Add(Me.txtkode)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.btncancel)
-        Me.Controls.Add(Me.btndelete)
-        Me.Controls.Add(Me.btnbaru)
-        Me.Controls.Add(Me.btnsave)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.pnlTopSide)
         Me.Controls.Add(Me.pnlLeftSide)
         Me.Controls.Add(Me.txtbobot)
@@ -353,17 +311,13 @@ Partial Class fmkriteria
     Friend WithEvents btnnilai As System.Windows.Forms.Button
     Friend WithEvents btndata As System.Windows.Forms.Button
     Friend WithEvents pnlTopSide As System.Windows.Forms.Panel
-    Friend WithEvents btncancel As System.Windows.Forms.Button
-    Friend WithEvents btndelete As System.Windows.Forms.Button
-    Friend WithEvents btnbaru As System.Windows.Forms.Button
-    Friend WithEvents btnsave As System.Windows.Forms.Button
+    Friend WithEvents btnDelete As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtkode As System.Windows.Forms.TextBox
-    Friend WithEvents txtatribut As System.Windows.Forms.TextBox
     Friend WithEvents btnminimize As System.Windows.Forms.Button
     Friend WithEvents btnclose As System.Windows.Forms.Button
     Friend WithEvents dg2 As System.Windows.Forms.DataGridView
-    Friend WithEvents btnedit As System.Windows.Forms.Button
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
 End Class
